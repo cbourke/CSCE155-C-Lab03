@@ -249,7 +249,7 @@ the chosen operation. Take care with the following *edge cases*:
     `log` function, which is the natural logarithm (base *e*). To
     change to another base, use the formula:
 
-    ![Change of Base Formula](img/changeOfBase.png "Change of Base Formula" =150x)
+    <img src="img/changeOfBase.png" alt="Change of Base Formula" height="150px"/>
 
     In addition, you should check that both operands are positive.
     If one or both are not positive, output an appropriate error
