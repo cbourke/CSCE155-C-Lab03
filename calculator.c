@@ -32,17 +32,39 @@ int main(int argc, char **argv) {
   scanf("%d", &choice);
 
   if(choice == 1) {
-    printf("%f", a + b);
+    result = a + b;
+      printf("Result: %.2f\n", result);
+    
   } else if(choice == 2) {
     result = a - b;
-    printf("%f", result);
+    printf("%.2f", result);
   } else if(choice == 3) {
-    //TODO: handle this case (multiplication)
+    result = a * b;
+      printf("Result: %.2f\n", result);
+    
+    
   } else if(choice == 4) {
+    if (b != 0) {
+        result = a / b;
+        printf("Result: %.2f\n", result);
+      } else {
+        printf("Cannot divide by zero.\n");
+      }
+    
+    
     //TODO: handle this case (division)
   } else if(choice == 5) {
+    result = fmin(a, b);
+      printf("Result: %.2f\n", result);
+    
     //TODO: handle this case (minimum)
   } else if(choice == 6) {
+    if (a > 0 && a != 1) {
+        result = log(b) / log(a);
+        printf("Result: %.2f\n", result);
+      } else {
+        printf("Invalid base for logarithm.\n");
+      }
     //TODO: handle this case (log_a(b))
   } else {
     printf("Please input a valid operator next time");
