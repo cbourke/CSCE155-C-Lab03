@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
 
   // Compute the total tax
   totalTax = tax - childCredit;
-  //TODO: compute the tax, child credit, and total tax here
+  
 
   printf("AGI:          $%10.2f\n", agi);
   printf("Tax:          $%10.2f\n", tax);
