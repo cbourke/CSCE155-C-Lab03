@@ -102,14 +102,14 @@ int main(int argc, char **argv) {
     return numFailed;
   }
 }
-
+//TODO: Write your logic here
+  //      The year is stored in the variable year
+  //      Your function should return true (1) if it represents a leap year
+  //      and false (0) if it does not.
 int isLeapYear(int year) {
   if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
     return 1;
   } else {
     return 0;}
-  //TODO: Write your logic here
-  //      The year is stored in the variable year
-  //      Your function should return true (1) if it represents a leap year
-  //      and false (0) if it does not.
+  
 }
