@@ -1,6 +1,6 @@
 /**
- * Author:
- * Date:
+ * Author: Alisha
+ * Date: 5-10-2023
  *
  * This programs provides basic calculator functionality
  * allowing a user to enter two operands and to compute
@@ -10,6 +10,63 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+double calculator( int choice, double a, double b );
+double calculator( int choice, double a, double b ){
+  double result= 0.0;
+    if(choice == 1)
+   {
+    result = a + b;
+      printf("Result: %.2f\n", result);
+    
+  }
+   else if(choice == 2) 
+  {
+    result = a - b;
+    printf("%.2f", result);
+    
+  }
+   else if(choice == 3)
+  {
+    result = a * b;
+      printf("Result: %.2f\n", result);
+    
+    
+  } //TODO: handle this case (division)
+  else if(choice == 4) 
+  {
+    if (b != 0) {
+        result = a / b;
+        printf("Result: %.2f\n", result);
+        
+      } else {
+        printf("Cannot divide by zero.\n");
+      }
+
+    
+  }//TODO: handle this case (minimum)
+   else if(choice == 5) 
+  {
+    result = fmin(a, b);
+      printf("Result: %.2f\n", result);
+    
+    
+  }//TODO: handle this case (log_a(b))
+   else if(choice == 6) 
+  {
+    if (a > 0 && a != 1) {
+        result = log(b) / log(a);
+        printf("Result: %.2f\n", result);
+      } else {
+        printf("Invalid base for logarithm.\n");
+      }
+    
+  } 
+  else
+  {
+    printf("Please input a valid operator next time");
+  }
+  return result;
+}
 
 int main(int argc, char **argv) {
 
@@ -30,23 +87,9 @@ int main(int argc, char **argv) {
   printf("(5) Minimum\n");
   printf("(6) log_a(b)\n");
   scanf("%d", &choice);
-
-  if(choice == 1) {
-    printf("%f", a + b);
-  } else if(choice == 2) {
-    result = a - b;
-    printf("%f", result);
-  } else if(choice == 3) {
-    //TODO: handle this case (multiplication)
-  } else if(choice == 4) {
-    //TODO: handle this case (division)
-  } else if(choice == 5) {
-    //TODO: handle this case (minimum)
-  } else if(choice == 6) {
-    //TODO: handle this case (log_a(b))
-  } else {
-    printf("Please input a valid operator next time");
-  }
-
+  result= calculator(choice,  a, b);
+  printf("Result: %.2f\n", result);
+ 
+  
   return 0;
 }

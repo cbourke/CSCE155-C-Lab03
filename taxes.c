@@ -27,9 +27,31 @@ int main(int argc, char **argv) {
     printf("How many children do you have? ");
     scanf("%d", &numChildren);
   }
+   if (agi <= 19900)
+  {
+    tax = agi * 0.1;
+  }
+   else if (agi <= 81050) 
+  {
+    tax = 2000 + (agi - 19900) * 0.15;
+  }
+   else if (agi <= 172750) 
+  {
+    tax = 7000 + (agi - 81050) * 0.2;
+  }
+   else 
+ {
+    tax = 17000 + (agi - 172750) * 0.25;
+  
+ }
+  // Compute the child credit based on the number of children
+  childCredit = numChildren * 1000;
 
-  //TODO: compute the tax, child credit, and total tax here
-
+  // Compute the total tax
+  totalTax = tax - childCredit;
+  
+  //display result
+  printf("\nTax Calculation:\n");
   printf("AGI:          $%10.2f\n", agi);
   printf("Tax:          $%10.2f\n", tax);
   printf("Child Credit: $%10.2f\n", childCredit);
