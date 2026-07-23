@@ -17,7 +17,7 @@ int isLeapYear(int year);
 int main(int argc, char **argv) {
 
   bool reportPass = false;
-  if(argc > 1 && strcmp(argv[1], "-reportPass") == 0) {
+  if(argc > 1 && strcmp(argv[1], "--passed") == 0) {
     reportPass = true;
   }
 
